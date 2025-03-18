@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "tmyk",
+  "version": "${version}",
+  "name": "TMYK",
+  "description": "The more you know...",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/tmyk/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "net.fg83.tmyk.client.TmykClient"
+    ],
+    "main": [
+      "net.fg83.tmyk.Tmyk"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": ">=${minecraft_version}"
+  }
+}
