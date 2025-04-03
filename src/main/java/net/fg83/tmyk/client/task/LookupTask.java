@@ -43,7 +43,7 @@ public class LookupTask implements Runnable{
         for (int i = 0; i < max; i++){
             String url = "https://minecraft.wiki/w/" + arr.get(i).getAsJsonObject().get("title").getAsString().replace(" ", "_");
             MutableText messageText = Text.literal("● " + url.replace("https://minecraft.wiki/w/", "").replace("_", " "));
-            messageText.setStyle(Style.EMPTY.withClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, url)).withUnderline(true).withColor(Formatting.GOLD));
+            Style.EMPTY.withClickEvent(new ClickEvent.OpenUrl(URI.create(url))).withUnderline(true).withColor(Formatting.GOLD);
             messages.add(messageText);
         }
     }
